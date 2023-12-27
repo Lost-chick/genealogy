@@ -65,6 +65,7 @@ const DemoOrganizationGraph = () => {
                     show: cfg.children && cfg.children.length
                 }
             }}
+            autoFit
             onReady={(graph) => {
                 graph.on('node:click', (evt) => {
                     console.log(evt);
