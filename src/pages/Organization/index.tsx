@@ -24,7 +24,7 @@ const DemoOrganizationGraph = () => {
         </div>
         <OrganizationGraph
             height={800}
-            data={data}
+            data={data[0]}
             behaviors={['drag-canvas', 'zoom-canvas', 'scroll-canvas']}
             nodeCfg={{
                 autoWidth: true,
@@ -68,7 +68,7 @@ const DemoOrganizationGraph = () => {
             autoFit
             onReady={(graph) => {
                 graph.on('node:click', (evt) => {
-                    console.log(evt);
+                    console.log(evt!.item!._cfg!.id);
                 });
             }}
         />;
